@@ -165,4 +165,14 @@
     width: 100px;
     text-align: center;
   }
+  .divDesc {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .divDesc i {
+    position: absolute;
+    right: 10px; /* Ajuste conforme necessário */
+    font-size: 1.2rem;
+  }
   
