@@ -158,7 +158,7 @@
   
   .columnAmount {
     width: 30%;
-    text-align: right;
+   
   }
   
   .columnType {
@@ -176,3 +176,11 @@
     font-size: 1.2rem;
   }
   
+  .name{  /* name preto para o nome entrada, saida, total*/
+    color: black;
+  }
+  /* -=-=-=-=-=-=-=-=-=-=-=- Nav  -=-=-=-=-=-=-=-=-=-=-=-  */
+
+  .rodapetitle{
+    color: black;
+  }
