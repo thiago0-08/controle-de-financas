@@ -1,186 +1,228 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    outline: none;
-  }
-  
-  body {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f5f7fa;
-  }
-  
-  main {
-    max-width: 600px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    background: #ffffff;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-  }
-  
-  .resume {
-    display: flex;
-    padding: 20px 0;
-    gap: 30px;
-    width: 100%;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  
-  .resume > div {
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    padding: 15px;
-    width: 160px;
-    background-color: #f9f9f9;
-    text-align: center;
-  }
-  
-  .resume > div span {
-    font-weight: bold;
-    font-size: 1.2em;
-    margin-top: 5px;
-    color: #333;
-  }
-  
-  .newItem {
-    display: flex;
-    gap: 15px;
-    align-items: flex-end;
-    width: 100%;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-  }
-  
-  .divDesc, .divType, .divAmount {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 180px;
-  }
-  
-  .newItem > button {
-    background-color: #2c73d2;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    height: 40px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .newItem > button:hover {
-    background-color: #1a5bb8;
-  }
-  
-  input, select {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 0.9em;
-    transition: border-color 0.3s ease;
-  }
-  
-  input:focus, select:focus {
-    border-color: #2c73d2;
-  }
-  
-  .divTable {
-    width: 100%;
-    margin-top: 20px;
-    overflow-x: auto;
-  }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  thead th {
-    text-align: left;
-    border-bottom: 2px solid #eee;
-    padding: 10px;
-    font-weight: bold;
-    color: #555;
-  }
-  
-  tbody td {
-    padding: 10px;
-    border-bottom: 1px solid #f2f2f2;
-  }
-  
-  tbody tr:last-child td {
-    border-bottom: none;
-  }
-  
-  i {
-    font-size: 20px;
-  }
-  
-  .bxs-chevron-up-circle {
-    color: #00c9a7;
-  }
-  
-  .bxs-chevron-down-circle {
-    color: #d83121;
-  }
-  
-  .columnAction {
-    width: 40px;
-    text-align: center;
-  }
-  
-  .columnAction > button {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-  }
-  
-  .columnAction > button:hover {
-    transform: scale(1.1);
-  }
-  
-  .columnAmount {
-    width: 30%;
-   
-  }
-  
-  .columnType {
-    width: 100px;
-    text-align: center;
-  }
-  .divDesc {
-    position: relative;
-    display: flex;
-    align-items: center;
-  }
-  .divDesc i {
-    position: absolute;
-    right: 10px; /* Ajuste conforme necessário */
-    font-size: 1.2rem;
-  }
-  
-  .name{  /* name preto para o nome entrada, saida, total*/
-    color: black;
-  }
-  /* -=-=-=-=-=-=-=-=-=-=-=- Nav  -=-=-=-=-=-=-=-=-=-=-=-  */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  outline: none;
+}
 
-  .rodapetitle{
-    color: black;
-  }
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; /* Coloca os elementos em coluna */
+  align-items: center; /* Centraliza horizontalmente */
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2); /* Gradiente moderno */
+  padding-top: 80px; /* Espaço para a navbar fixa */
+}
+
+main {
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  margin-bottom: 20px; /* Espaço entre o main e o gráfico */
+}
+
+
+.resume {
+  display: flex;
+  padding: 20px 0;
+  gap: 20px;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.resume > div {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  width: 180px;
+  background-color: #ffffff;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resume > div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.resume > div span {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-top: 5px;
+  color: #333;
+}
+
+.newItem {
+  display: flex;
+  gap: 15px;
+  align-items: flex-end;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.divDesc, .divType, .divAmount, .divDate {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 180px;
+}
+
+.newItem > button {
+  background-color: #2c73d2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  height: 40px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.newItem > button:hover {
+  background-color: #1a5bb8;
+  transform: scale(1.05);
+}
+
+input, select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.9em;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus {
+  border-color: #2c73d2;
+  box-shadow: 0 0 5px rgba(44, 115, 210, 0.5);
+}
+
+.divTable {
+  width: 100%;
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+thead th {
+  text-align: left;
+  border-bottom: 2px solid #eee;
+  padding: 12px;
+  font-weight: bold;
+  color: #555;
+  background-color: #f8f9fa;
+}
+
+tbody td {
+  padding: 12px;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+i {
+  font-size: 20px;
+}
+
+.bxs-chevron-up-circle {
+  color: #00c9a7;
+}
+
+.bxs-chevron-down-circle {
+  color: #d83121;
+}
+
+.columnAction {
+  width: 40px;
+  text-align: center;
+}
+
+.columnAction > button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.columnAction > button:hover {
+  transform: scale(1.1);
+}
+
+.columnAmount {
+  width: 30%;
+}
+
+.columnType {
+  width: 100px;
+  text-align: center;
+}
+
+.divDesc {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.divDesc i {
+  position: absolute;
+  right: 10px;
+  font-size: 1.2rem;
+}
+
+.name {
+  color: black;
+}
+
+
+
+/* GRAFICO  */
+.chart-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto; /* Centraliza e adiciona espaçamento */
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+
+canvas {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/*Roda pe */
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  background-color: #000000; /* Cor de fundo do footer */
+  color: white; /* Cor do texto */
+  margin-top: auto; /* Coloca o footer no final da página */
+}
